@@ -57,7 +57,7 @@ public final class ChangeLogger implements Subscriber<Change> {
         logger.debug("{} onNext remove {}", source, path);
         break;
       default:
-        Checks.ARGUMENT.unexpected(action, "change");
+        Checks.ARGUMENT.invalid(action, "change");
     }
 
     subscription.request(1);
